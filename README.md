@@ -9,3 +9,8 @@
 
 ![Colour_11](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.1.1/P.1.1.1_1.png)
 ![Colour_12](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.1.1/P.1.1.1_2.png)
+
+##P.1.1.2 Colour Spectrum in a Circle
+
+![Colour111](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.1.2/1.1.2_1.png)
+![Colour112](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.1.2/1.1.2_2.png)
