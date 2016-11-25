@@ -14,3 +14,8 @@
 
 ![Colour111](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.1.2/1.1.2_1.png)
 ![Colour112](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.1.2/1.1.2_2.png)
+
+##P.1.2.1 Colour Palettes through Interpolate
+
+![Colour111](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.2.1/1.2.1_1.png)
+![Colour112](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.2.1/1.2.1_2.png)
