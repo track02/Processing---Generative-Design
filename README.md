@@ -15,7 +15,19 @@
 ![Colour111](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.1.2/1.1.2_1.png)
 ![Colour112](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.1.2/1.1.2_2.png)
 
-##P.1.2.1 Colour Palettes through Interpolate
+##P.1.2.1 Colour Palettes through Interpolation
+
+Heres a grid is generated with two random colours placed at the end of each row.
+Interpolation is used to determine the rectangle colours between these two colours.
 
 ![Colour111](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.2.1/P_1_2_1_1.png)
 ![Colour112](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.2.1/P_1_2_1_2.png)
+
+##P.1.2.2 Colour Palettes from Images
+
+A given image is scanned using a predetermined grid spacing and the pixel values are saved into an array for use as a colour palette. This colour array can also be sorted by hue, saturation, brightness or grayscale values.
+
+![Original Image](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.2.2/P.1.2.2_0.png)
+![Scanned Image](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.2.2/P.1.2.2_1.png)
+![Colour Palette](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.2.2/P.1.2.2_2.png)
+![Sorted Palette](https://github.com/track02/Processing---Generative-Design/blob/master/Images/P.1.2.2/P.1.2.2_3.png)
