@@ -12,8 +12,11 @@ int tileCountX = 60;
 int tileCountY = 60;
 
 //Counter - random palette for each row
+int counter = 0;
 
-
+//Offset each row
+int offset = (int) random(tileCountX) + 1;
+int index = 0;
 
 //For each colour there needs to exist a corresponding H/S/B value
 //Depending on key presses, these arrays are populated using different rules
@@ -39,13 +42,19 @@ void setup(){
 
 void draw(){
  
-  
+  counter = 0;
+
   for(int gridY = 0; gridY < tileCountY; gridY++){
     for(int gridX = 0; gridX < tileCountX; gridX++){
+      
+      index = counter % offset;
+      
       float posX = tileWidth * gridX;
       float posY = tileHeight * gridY;
-      fill(hueValues[gridX], saturationValues[gridX], brightnessValues[gridX]);
+      fill(hueValues[index], saturationValues[index], brightnessValues[index]);
       rect(posX, posY, tileWidth, tileHeight);
+      counter++;
+      
     }
   }
   
@@ -125,6 +134,9 @@ void keyReleased(){
       }
     }
   }
+  
+  
+  
   if (key == '0') {  
     for (int i=0; i<tileCountX; i++) {
       if (i%2 == 0) {
@@ -139,6 +151,11 @@ void keyReleased(){
       }
     }
 }
+
+  if(key == 'z'){
+    offset = (int) random(tileCountX) + 1;
+  }
+
 }
 
 void fillRandom(){
