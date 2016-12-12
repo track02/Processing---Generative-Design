@@ -4,6 +4,7 @@ int tileCount = 20;
 //Stroke cap variable
 int actStrokeCap = ROUND;
 
+boolean pause = false;
 
 
 void setup(){
@@ -17,30 +18,34 @@ void setup(){
 
 void draw(){
  
-  background(255);
-  smooth();
-  noFill();
   
-  //Sets style for rendering line endings
-  strokeCap(actStrokeCap);
+  if (!pause){
+    
+    background(255);
+    smooth();
+    noFill();
+    
+    //Sets style for rendering line endings
+    strokeCap(actStrokeCap);
+    
+    
+    
+    for (int gridY=0; gridY<tileCount; gridY++) {
+      for (int gridX=0; gridX<tileCount; gridX++) {
   
+        int posX = width/tileCount*gridX;
+        int posY = height/tileCount*gridY;
   
+        int toggle = (int) random(0,3);
   
-  for (int gridY=0; gridY<tileCount; gridY++) {
-    for (int gridX=0; gridX<tileCount; gridX++) {
-
-      int posX = width/tileCount*gridX;
-      int posY = height/tileCount*gridY;
-
-      int toggle = (int) random(0,2);
-
-      if (toggle == 0) {
-        strokeWeight(mouseX/20);
-        line(posX, posY, posX+width/tileCount, posY+height/tileCount);
-      }
-      if (toggle == 1) {
-        strokeWeight(mouseY/20);
-        line(posX, posY+width/tileCount, posX+height/tileCount, posY);
+        if (toggle == 0) {
+          strokeWeight(mouseX/20);
+          line(posX, posY, posX+width/tileCount, posY+height/tileCount);
+        }
+        if (toggle == 1) {
+          strokeWeight(mouseY/20);
+          line(posX, posY+width/tileCount, posX+height/tileCount, posY);
+        }
       }
     }
   }
@@ -58,5 +63,10 @@ void keyReleased(){
   }
   if (key == '3'){
     actStrokeCap = PROJECT;
+  }
+  if (key == '4'){
+    
+      pause = !pause;      
+    
   }
 }
