@@ -15,7 +15,6 @@ void setup(){
   noStroke();
   colorMode(HSB, 360, 100, 100, 100);
   image = loadImage("Pics/pic2.jpg");
-  
 }
 
 void draw(){
