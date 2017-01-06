@@ -1,4 +1,3 @@
-
 //Colour segments are arranged in a fan shape, we'll compute
 //individual vertices using cosine and sine values of the corresponding angle
 
@@ -7,11 +6,8 @@ int radius = 300;
 
 void setup(){
  
-  size(800,800);
-  
+ size(800,800);
 }
-
-
 
 void draw(){
   
@@ -49,11 +45,9 @@ void draw(){
   endShape();
 }
 
-
 //Add event handling for keys allowing segment no to be updated/
 void keyReleased(){
   
-   
   switch(key){
     case '1':
       segmentCount = 360;
