@@ -1,7 +1,5 @@
-
 //Import generative design library for sort functions
 import generativedesign.*;
-
 
 //Colour palettes from images
 //Generates a colour palette from a provided image, allows various sorting options
@@ -11,7 +9,6 @@ color[] colours;
 
 String sortMode = null; //Variable to determine sorting mode
 
-
 void setup(){
  
   size(600,600);
@@ -20,7 +17,6 @@ void setup(){
   image = loadImage("Pics/pic2.jpg");
   
 }
-
 
 void draw(){
  
@@ -51,10 +47,8 @@ void draw(){
   //With the colour array fully populated lets sort it
   //We pass a reference to the program, the colour array and a value to sort by
   if(sortMode != null)
-    colours = GenerativeDesign.sortColors(this, colours, sortMode);
-    
-  
-      
+    colours = GenerativeDesign.sortColors(this, colours, sortMode);  
+       
   //Reset i for drawing the grid
   i = 0;
   
@@ -67,8 +61,7 @@ void draw(){
       rect(gridX*rectSize, gridY*rectSize, rectSize, rectSize);
       i++;
     }
-  }
-  
+  }  
 }
 
 //Function to alter sort mode
@@ -79,5 +72,4 @@ void keyReleased(){
   if (key == '6') sortMode = GenerativeDesign.SATURATION;
   if (key == '7') sortMode = GenerativeDesign.BRIGHTNESS;
   if (key == '8') sortMode = GenerativeDesign.GRAYSCALE;
-
 }
