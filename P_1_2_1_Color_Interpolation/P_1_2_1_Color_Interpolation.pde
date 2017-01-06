@@ -65,14 +65,15 @@ void draw(){
 }
 
 
+//For each row generates a random colour in the leftmost and rightmost cells
+//Interpolation is then performed using these colours as start/end points
+void genColours(){
 
- void genColours(){
-   
-    for(int i = 0; i<tileCountY; i++){
-   leftCol[i] = color(random(0,50), random(0,100), random(0,100));
-   rightCol[i] = color(random(0,50), random(0,100), random(0,100));
-  }
+ for(int i = 0; i<tileCountY; i++){
+  leftCol[i] = color(random(0,50), random(0,100), random(0,100));
+  rightCol[i] = color(random(0,50), random(0,100), random(0,100));
  }
+}
  
   void mouseReleased(){
    genColours();
