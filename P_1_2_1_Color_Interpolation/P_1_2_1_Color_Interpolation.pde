@@ -1,13 +1,9 @@
-//P1.2.1 - Colour Palettes through Interpolation
-
-
-
+//Colour Palettes through Interpolation
 
 int tileCountX = 2;
 int tileCountY = 10;
 color[] leftCol = new color[tileCountY];
 color[] rightCol = new color[tileCountY];
-
 
 void setup(){
  
@@ -15,9 +11,7 @@ void setup(){
   colorMode(HSB,360,100,100,100);
   noStroke();
   genColours();
-    
 }
-
 
 void draw(){
   
@@ -30,7 +24,6 @@ void draw(){
   
  tileCountX = (int) map(mouseX, 0, width,2,100);
  tileCountY = (int) map(mouseY, 0, height, 2,10);
- 
  
  //Calculate width and height of tiles using total no. of tiles
  float tileWidth = width / (float) tileCountX;
@@ -58,12 +51,9 @@ void draw(){
      float posX = tileWidth*gridX;
      float posY = tileHeight*gridY;
      rect(posX, posY, tileWidth, tileHeight);
-   
-   
    }
  }
 }
-
 
 //For each row generates a random colour in the leftmost and rightmost cells
 //Interpolation is then performed using these colours as start/end points
@@ -74,7 +64,8 @@ void genColours(){
   rightCol[i] = color(random(0,50), random(0,100), random(0,100));
  }
 }
- 
-  void mouseReleased(){
+
+void mouseReleased(){
+  
    genColours();
- }
+}
