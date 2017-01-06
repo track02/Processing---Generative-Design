@@ -1,7 +1,6 @@
 //All colours consist of three components, hue/staturation/brightness
 //The values for these components can be defined by a set of rules.
 
-
 //Import generative design library for sort functions
 import generativedesign.*;
 
@@ -25,8 +24,6 @@ int[] saturationValues = new int[tileCountX];
 int[] brightnessValues = new int[tileCountX];
 
 void setup(){
- 
-
   
   size(600,600);
   noStroke();
@@ -39,7 +36,6 @@ void setup(){
   fillRandom();
 }
 
-
 void draw(){
  
   counter = 0;
@@ -51,23 +47,24 @@ void draw(){
       
       float posX = tileWidth * gridX;
       float posY = tileHeight * gridY;
+      
       fill(hueValues[index], saturationValues[index], brightnessValues[index]);
       rect(posX, posY, tileWidth, tileHeight);
-      counter++;
       
+      counter++;
     }
   }
-  
 }
 
-//Function to alter sort mode
+//Input handling
 void keyReleased(){
 
-  
   //Apply different value generation rules depending on key 
     if (key == '1') {
       fillRandom();
   }
+  
+  //Following conditions are used to alter sort mode
   if (key == '2') { 
     for (int i=0; i<tileCountX; i++) {
       hueValues[i] = (int) random(0,360);
@@ -134,8 +131,6 @@ void keyReleased(){
       }
     }
   }
-  
-  
   
   if (key == '0') {  
     for (int i=0; i<tileCountX; i++) {
