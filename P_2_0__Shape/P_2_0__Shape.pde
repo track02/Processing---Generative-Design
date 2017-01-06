@@ -1,10 +1,9 @@
-void setup(){
- 
-  size(550,550);
-  
-  
-}
+//Generates a circle using mouse position parameters
 
+void setup(){
+
+  size(550,550); 
+}
 
 void draw(){
  
