@@ -1,3 +1,5 @@
+//P.1.1.2 Creates a circular colour spectrum / colour wheel
+
 //Colour segments are arranged in a fan shape, we'll compute
 //individual vertices using cosine and sine values of the corresponding angle
 
