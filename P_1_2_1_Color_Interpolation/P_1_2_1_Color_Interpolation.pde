@@ -1,4 +1,5 @@
-//Colour Palettes through Interpolation
+//P1.2.1 Colour Interpolation
+//Generation of colour palettes through Interpolation
 
 int tileCountX = 2;
 int tileCountY = 10;
