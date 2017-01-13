@@ -1,3 +1,4 @@
+//P.1.2.3 Colour Palettes from Rules
 //All colours consist of three components, hue/staturation/brightness
 //The values for these components can be defined by a set of rules.
 
