@@ -1,3 +1,6 @@
+//P.1.2.2  Colour Palettes from Images
+//Generates a colour palette from a given image
+
 //Import generative design library for sort functions
 import generativedesign.*;
 
