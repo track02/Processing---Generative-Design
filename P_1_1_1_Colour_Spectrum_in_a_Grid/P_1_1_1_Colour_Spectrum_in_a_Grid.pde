@@ -1,3 +1,7 @@
+//P.1.1.1 - Colour Spectrum in a Grid
+//Creates a grid colour palette
+
+
 int stepX;
 int stepY;
 
