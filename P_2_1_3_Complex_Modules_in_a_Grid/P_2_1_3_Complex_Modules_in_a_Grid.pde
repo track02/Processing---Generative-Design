@@ -1,3 +1,5 @@
+//P.2.1.3 Complex Modules in a Grid
+
 import generativedesign.*;
 
 float tileCount = 10;
@@ -8,16 +10,12 @@ float endSize, endOffset;
 
 int actRandomSeed = 0;
 
-
-
 void setup(){
+
  //frameRate(1);
   size(800,800);
   tileWidth = width/tileCount;
   tileHeight = height/tileCount;
-
-
- 
 }
 
 
@@ -37,7 +35,6 @@ void draw(){
     //Translate coordinate system by half a tile
     //Aligns tiles in grid, otherwise center of first tile will be 0,0
     translate((width/tileCount)/2, (height/tileCount)/2);
-
    
     for (int gridY=0; gridY<tileCount; gridY++) {
       for (int gridX=0; gridX<tileCount; gridX++) {
@@ -61,10 +58,7 @@ void draw(){
         }
         
         //Restore previous matrix state
-        popMatrix();
-  
-  
+        popMatrix();   
       }
-    }
-  
+    }  
 }
