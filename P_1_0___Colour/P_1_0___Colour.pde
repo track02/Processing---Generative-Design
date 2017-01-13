@@ -1,3 +1,4 @@
+//P.1.0 Color
 //Generates diffently coloured squares based on mouse cursor position
 
 //Setup is called once on startup
