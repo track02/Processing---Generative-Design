@@ -1,3 +1,5 @@
+//2.2.2 Intelligent Agents - movement is constrained by rules, change direction on hitting window edge or crossing previous path
+
 import generativedesign.*;
 
 int NORTH = 0;
@@ -14,8 +16,6 @@ float posX, posY, posXcross, posYcross;
 float angleCount = 7, angle = getRandomAngle(direction);
 int actRandomSeed = 0;
 
-
-
 void setup(){
 
   size(800,800);
@@ -25,15 +25,10 @@ void setup(){
   posX = (int)random(0, width);
   posY = (int)random(0, height);
   posXcross = posX;
-  posYcross = posY;
-
- 
+  posYcross = posY; 
 }
 
-
 void draw(){
-
-  
     
     for(int i = 0; i<mouseX; i++){
       
@@ -45,8 +40,7 @@ void draw(){
       //Determine next step
       posX += cos(radians(angle)) * stepSize;
       posY += sin(radians(angle)) * stepSize;
-      
-      
+            
       //Check if edge of window is reached, and change direction
       //5 Pixels used as buffer
       boolean reachedEdge = false;
@@ -80,14 +74,15 @@ void draw(){
       
       if(get(px, py) != color(255) || reachedEdge){
         
-        //
         angle = getRandomAngle(direction);
         float distance = dist(posX, posY, posXcross, posYcross);
+        
         if (distance >= minLength) {
           strokeWeight(3);
           stroke(0);
           line(posX, posY, posXcross, posYcross);
         }
+        
         posXcross = posX;
         posYcross = posY;
       }
@@ -95,6 +90,7 @@ void draw(){
 }
 
 float getRandomAngle(int theDirection) {
+
   float a = (floor(random(-angleCount, angleCount)) + 0.5) * 90.0/angleCount;
 
   if (theDirection == NORTH) return (a - 90);
