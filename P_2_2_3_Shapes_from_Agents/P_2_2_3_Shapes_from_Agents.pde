@@ -1,3 +1,5 @@
+//P.2.2.3 Shapes from Agents - Series of agents slowly follows the mouse cursor whilst randomly moving up/down to draw a pattern
+
 import generativedesign.*;
 
 float centerX, centerY;
@@ -24,25 +26,22 @@ void setup(){
   float angle = radians(360/float(formResolution));
   for(int i=0; i<formResolution; i++){
     x[i] = cos(angle*i) * startRadius;
-    y[i] = sin(angle*i) * startRadius;
-    
+    y[i] = sin(angle*i) * startRadius;    
   }
 }
 
 
 void draw(){
 
-  if (mouseX != 0 || mouseY != 0) {
-    
+  if (mouseX != 0 || mouseY != 0) {    
     //Difference between mouse position / center is determined
     //and center position is updated to slowly follow mouse
      centerX += (mouseX - centerX) * 0.01;
-     centerY += (mouseY - centerY) * 0.01;
-    
+     centerY += (mouseY - centerY) * 0.01;    
   }
   
   //For each agent that makes up the shape
-  for(int i = 0; i < formResolution; i++){
+  for(int i = 0; i < formResolution; i++){  
     //Move the agent randomly up/down using specified step size
     x[i] += random(-stepSize,stepSize);
     y[i] += random(-stepSize,stepSize);
@@ -64,6 +63,7 @@ void draw(){
   for (int i=0; i<formResolution; i++){
     curveVertex(x[i]+centerX, y[i]+centerY);
   }
+  
   curveVertex(x[0]+centerX, y[0]+centerY);
 
   // end controlpoint
