@@ -1,11 +1,9 @@
-//2.2.4
+//2.2.4 Growth Structures from Agents
 //Complex shapes are created out of simple propagation patterns
 //Draw a circle and position is as close to possible to its nearest neighbour
 
-
 //Fix RNG seed each time program is executed
 int actRandomSeed = 0;
-
 
 int currentCount = 0; //Current circle being drawn
 int maxCount = 1000; //Max no. circles to draw
@@ -15,13 +13,11 @@ float[] x = new float[maxCount];
 float[] y = new float[maxCount];
 float[] r = new float[maxCount];
 
-
 void setup(){
  
   //800x600 Window, No Outlining
   size(800,600);
   noStroke(); 
-
 }
 
 void draw(){
@@ -70,6 +66,5 @@ void draw(){
   
   //Break condition
   if(currentCount >= maxCount)
-    noLoop();
-  
+    noLoop();  
 }
