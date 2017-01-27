@@ -1,9 +1,7 @@
-//2.2.5
+//2.2.5 Structural Density from Agents
 //Using an iterative process to form patterning
 //Draw a circle, if it doesn't intersect another circle make it as large as possible
 //Otherwise try again
-
-
 
 int currentCount = 0; //Current circle being drawn
 int maxCount = 5000; //Max no. circles to draw
@@ -22,8 +20,6 @@ void setup(){
  
   //800x600 Window, No Outlining
   size(800,600);
-
-
 }
 
 void draw(){
@@ -82,7 +78,7 @@ void draw(){
     y[currentCount] = newY;
     r[currentCount] = newRadius;
     currentCount++;
-
+    
   }
 
   //Draw circles
@@ -102,6 +98,5 @@ void draw(){
   
   //Break condition
   if(currentCount >= maxCount)
-    noLoop();
-  
+    noLoop();  
 }
