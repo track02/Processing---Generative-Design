@@ -1,4 +1,5 @@
-//2.3.3 - Alter position and size of characters based on brush speed and location
+//2.3.3 - Drawing with Animated Brushes
+//Alter position and size of characters based on brush speed and location
 
 float angle = 0;
 float angleSpeed = 10;
@@ -11,7 +12,6 @@ void setup(){
   size(800,600);
   //White background
   background(255);
-
 }
 
 void draw(){
@@ -36,17 +36,17 @@ void draw(){
     popMatrix();
     
     //Increase rotation angle
-    angle += angleSpeed;
-
-    
+    angle += angleSpeed;   
   }
 }
 
 void mousePressed(){
+ 
  lineLength = random(70,200); 
 }
     
 void randomCol(){
-  col = color(random(0,255), random(0,255), random(0,255));
+ 
+ col = color(random(0,255), random(0,255), random(0,255));
 }
   
