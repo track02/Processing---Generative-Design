@@ -12,13 +12,9 @@ void setup(){
   size(800,600);
   
   background(255);
-
-
 }
 
 void draw(){
-  
-
   
   if(mousePressed){
     float d = dist(x,y, mouseX, mouseY); //Determine distance between last drawn point and mouse
@@ -50,13 +46,5 @@ void draw(){
         x = mouseX;
         y = mouseY;        
       }
-    }
-  
-  
-    
-    
-  }
-    
-    
-  
+    }      
 }
