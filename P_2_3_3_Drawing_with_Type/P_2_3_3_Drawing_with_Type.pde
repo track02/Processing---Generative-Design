@@ -39,18 +39,10 @@ void draw(){
       
       counter++;
       if (counter > letters.length() - 1)
-        counter = 0;
-        
+        counter = 0;        
        
       x = x + cos(angle) * stepSize;
       y = y + sin(angle) * stepSize;
-    }
-  
-  
-    
-    
-  }
-    
-    
-  
+    }    
+  }  
 }
