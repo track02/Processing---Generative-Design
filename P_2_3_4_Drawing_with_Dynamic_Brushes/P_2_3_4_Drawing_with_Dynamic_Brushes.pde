@@ -1,10 +1,9 @@
-//P.2.3.2 - Explore the control of parameters of distance and angle
+//P.2.3.4 - Drawing with Dynamic Brushes
 
 float x,y;
 float stepSize = 5;
 PShape lineModule;
 float moduleSize = 10.0;
-
 
 void setup(){
  
@@ -22,7 +21,6 @@ void draw(){
     
     float d = dist(x,y, mouseX, mouseY); //Determine distance between last drawn point and mouse
 
-    
     if(d > stepSize){ //Limits "gap" between line
       
       float angle = atan2(mouseY-y, mouseX-x); //Determine angle to the previous position
@@ -35,13 +33,6 @@ void draw(){
        
       x = x + cos(angle) * stepSize;
       y = y + sin(angle) * stepSize;
-    }
-  
-  
-    
-    
-  }
-    
-    
-  
+    }    
+  } 
 }
