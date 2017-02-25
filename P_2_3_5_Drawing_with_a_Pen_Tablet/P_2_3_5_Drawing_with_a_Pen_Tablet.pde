@@ -4,14 +4,12 @@ import generativedesign.*;
 
 Tablet tablet;
 
-
 void setup(){
  
   //800x600 Window
   size(800,600);
   
   tablet = new Tablet(this);
-
 }
 
 void draw(){
@@ -49,23 +47,23 @@ void draw(){
     beginShape();
     // start controlpoint
     curveVertex(pointsX[3],pointsY[3]); 
+    
     // only these points are drawn
     for (int i=0; i< pointsX.length; i++) {
       curveVertex(pointsX[i],pointsY[i]);  
     }
+    
     // end controlpoint
     curveVertex(pointsX[1],pointsY[1]); 
     endShape(CLOSE);
-popMatrix();
     
-  }
+    popMatrix();
     
-  
+  }  
 }
 
 
-
-// gamma ramp, non linaer mapping ... [From code sample]
+// gamma ramp, non linear mapping ... [From code sample]
 float gamma(float theValue, float theGamma) {
   return pow(theValue, theGamma);
 }
