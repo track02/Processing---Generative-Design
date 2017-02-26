@@ -14,6 +14,7 @@ void setup(){
 }
 
 void draw(){
+
   //Blank draw - program keeps running  
 }
 
@@ -25,6 +26,7 @@ void mouseMoved(){
 }
 
 void mouseDragged(){
+
  textSize((mouseX-width/2)*5+1);
  text(letter, width/2, mouseY);
 }
