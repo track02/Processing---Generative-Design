@@ -15,8 +15,7 @@ PFont font;
 void setup(){
  
   size(800,600);
-   font = createFont("Arial",10);
-  
+   font = createFont("Arial",10);  
 }
 
 void draw(){
@@ -52,14 +51,15 @@ void draw(){
 }
 
 void keyPressed(){
+
   if(key != CODED){
     switch(key){
       default:
         textTyped += key;
         fontSizes = append(fontSizes, newFontSize);
     }
-    pMillis = millis();
-            
-    }
+   
+   pMillis = millis();            
+ }
 }
   
